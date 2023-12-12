@@ -43,17 +43,21 @@ main {
     max-width: 25vw;
     max-height: 25vh;
     background-color: white;
+    color: #1e2227;
     padding: 0 2px;
     border-radius: 15px;
     user-select: none;
     text-align: center;
+    font-size: 16px;
 }
-
+.card h3, .card p {
+    font-size: 120%;
+}
 
 .card-bottom {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    height: 55%;
+    height: clamp(25px,45%);
     margin: 2px;
     gap: 2px;
 }
@@ -111,6 +115,10 @@ footer {
     padding: 2px;
 }
 
-footer > p {
+footer p {
     color: #0099d5;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
 }
