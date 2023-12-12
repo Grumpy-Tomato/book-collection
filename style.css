@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr 10fr 25px;
+}
+
+header {
+    display: flex;
+    background-color: #1e2227;
+    grid-row: 1 / span 1;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 {
+    font-size: calc(24px + 2vw);
+    color: #0099d5;
+}
+
+main {
+    display: grid;
+    background-color: #1e2227;
+    grid-row-start: 2;
+    grid-row-end: span 1;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 25vw;
+    max-height: 25vh;
+    background-color: white;
+    padding: 0 2px;
+    border-radius: 15px;
+    user-select: none;
+    text-align: center;
+}
+
+
+.card-bottom {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 55%;
+    margin: 2px;
+    gap: 2px;
+}
+
+.read {
+    height: 100%;
+    background-color: rgb(192, 190, 190);
+    border-radius: 10px;
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #0099d5;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.delete:hover, .read:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.delete img {
+    transform: scale(0.6);
+}
+
+.card-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 800%;
+    color: rgb(192, 190, 190);
+    padding: 2vw;
+}
+
+.card-add:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    background-color: #1e2227;
+    grid-row-start: 3;
+    grid-row-end: span 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    gap: 2px;
+    height: 30px;
+    padding: 2px;
+}
+
+footer > p {
+    color: #0099d5;
+}
