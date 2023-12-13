@@ -31,13 +31,16 @@ addBookToLibrary(harryPotter);
 addBookToLibrary(doAndroidsDream);
 addBookToLibrary(electricDreams);
 
-console.log(myLibrary);
-
 // Dom Objects
-const addCard = document.querySelector('.card-add')
+const addCard = document.querySelector('.card-add');
+const addBookForm = document.querySelector('.add_book_section');
+const addBookSubmitButton = document.querySelector("#add-book-submit");
 
 for (i in myLibrary) {
     let bookObject = myLibrary[i];
     addCard.insertAdjacentHTML("beforebegin", bookObject.cardContent);
 }
 
+addCard.addEventListener('click', () => {
+    addBookForm.style.display = 'flex';
+})
