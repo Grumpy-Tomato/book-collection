@@ -33,7 +33,8 @@ addBookToLibrary(electricDreams);
 
 // Dom Objects
 const addCard = document.querySelector('.card-add');
-const addBookForm = document.querySelector('.add_book_section');
+const addBookFormSection = document.querySelector('.add-book-section');
+const addBookForm = document.querySelector('.new-book-form');
 const addBookSubmitButton = document.querySelector("#add-book-submit");
 
 for (i in myLibrary) {
@@ -42,5 +43,5 @@ for (i in myLibrary) {
 }
 
 addCard.addEventListener('click', () => {
-    addBookForm.style.display = 'flex';
+    addBookFormSection.style.display = 'flex';
 })

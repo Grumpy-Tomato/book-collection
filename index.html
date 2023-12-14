@@ -25,23 +25,20 @@
         </div> -->
         <div class="card card-add">+</div>
     </main>
-    <section class="add_book_section" style="display: none">
-            <form action="#" name="new-book-form" class="new-book-form" method="POST">
+    <section class="add-book-section" style="display: none">
+            <form action="return displayWords()" name="new-book-form" class="new-book-form" method="GET">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title">
+                <input type="text" id="title" name="title"><br>
                 <label for="author">Author:</label>
-                <input type="text" id="author" name="author">
+                <input type="text" id="author" name="author"><br>
                 <label for="pages">Number of Pages:</label>
-                <input type="number">
-                <label for="has-been-read">Has Been Read:</label>
+                <input type="number" id="pages" name="pages"><br>
                 <div class="has-been-read">
-                    <input type="radio" id="yes" name="has-been-read" value="yes">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="has-been-read" value="no">
-                    <label for="no">No</label>
-                </div>
+                    <label for="has-been-read">Has Been Read:</label>
+                    <input type="checkbox" id="has-been-read" name="has-been-read" value="read">
+                </div><br>
                 <div class="add-book-buttons">
-                    <input type="button" id="add-book-submit" value="Submit">
+                    <input type="submit" id="add-book-submit" value="Submit">
                     <input type="button" id="add-book-clear" value="Clear Fields">
                 </div>
             </form>
